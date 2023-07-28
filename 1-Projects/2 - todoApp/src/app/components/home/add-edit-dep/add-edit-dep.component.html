@@ -1,0 +1,40 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+
+        <label class="col-sm-2 col-form-label">Todo Id</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="HomeId"
+             placeholder="Enter Todo Id">
+        </div>
+    
+        <label class="col-sm-2 col-form-label">Todo Title</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="HomeTitle"
+            placeholder="Enter Todo Title">
+        </div>
+    
+        <label class="col-sm-2 col-form-label">Todo Priority</label>
+        <div class="col-sm-10">
+           <select class="form-control" [(ngModel)]="HomePriority">
+               <option>--Select--</option>
+               <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+           </select>
+        </div>
+    
+        <label class="col-sm-2 col-form-label">Created Date</label>
+        <div class="col-sm-10">
+            <input type="datetime-local"  [(ngModel)]="HomeCreatedDate">
+        </div>
+    
+    <button (click)="addTodo()" class="btn btn-primary">
+        Add
+    </button>
+    
+    <button (click)="updateTodo()" class="btn btn-primary">
+        Update
+    </button>
+    </div>
+</div>
